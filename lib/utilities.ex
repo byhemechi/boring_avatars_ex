@@ -60,7 +60,9 @@ defmodule BoringAvatars.Utilities do
   def get_contrast(hex_color) do
     # Remove # if present
     hex_color =
-      if String.starts_with?(hex_color, "#"), do: String.slice(hex_color, 1..-1), else: hex_color
+      if String.starts_with?(hex_color, "#"),
+        do: String.slice(hex_color, 1..-1//1),
+        else: hex_color
 
     # Convert to RGB
     {r, _} = Integer.parse(String.slice(hex_color, 0..1), 16)

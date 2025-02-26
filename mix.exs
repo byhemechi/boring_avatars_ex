@@ -21,7 +21,9 @@ defmodule BoringAvatars.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:phoenix, "~> 1.7"}
+      {:phoenix, "~> 1.7"},
+      {:phoenix_html, "~> 4.2"},
+      {:phoenix_live_view, "~> 1.0"}
     ]
   end
 end
