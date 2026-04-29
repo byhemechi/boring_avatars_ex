@@ -1,0 +1,7 @@
+%{
+  "color": {:hex, :color, "0.12.1", "a1c3aa9aa5ad99b3a217d49ab6743c082399af57002c83d9c8160f7f8b7a3019", [:mix], [{:bandit, "~> 1.5", [hex: :bandit, repo: "hexpm", optional: true]}, {:plug, "~> 1.15", [hex: :plug, repo: "hexpm", optional: true]}], "hexpm", "b4241a97b21af453aeb72aa56e5297821003eb93ce29b2893b344bf2166a1740"},
+  "colorex": {:hex, :colorex, "1.0.0", "4344fe156e0dacfe7daabe348f5de18f0c3371aa05f7dc835a0d28c44a9a66c9", [:mix], [{:jason, ">= 0.0.0", [hex: :jason, repo: "hexpm", optional: false]}], "hexpm", "3aae023904259011df4412b1c7688da4e65436e09d878c104bbf0da7ca6bd881"},
+  "floki": {:hex, :floki, "0.38.1", "f002ccac94b3bcb21d40d9b34cc2cc9fd88a8311879120330075b5dde657ebee", [:mix], [], "hexpm", "e744bf0db7ee34b2c8b62767f04071107af0516a81144b9a2f73fe0494200e5b"},
+  "jason": {:hex, :jason, "1.4.4", "b9226785a9aa77b6857ca22832cffa5d5011a667207eb2a0ad56adb5db443b8a", [:mix], [{:decimal, "~> 1.0 or ~> 2.0", [hex: :decimal, repo: "hexpm", optional: true]}], "hexpm", "c5eb0cab91f094599f94d55bc63409236a8ec69a21a67814529e8d5f6cc90b3b"},
+  "mdn_content": {:git, "https://github.com/mdn/content.git", "add7753c8a49814518a5a9a50b06d36d1fd33c21", [sparse: "files/en-us/web/svg/reference"]},
+}
