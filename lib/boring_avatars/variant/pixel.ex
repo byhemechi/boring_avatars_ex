@@ -1,10 +1,9 @@
-defmodule BoringAvatar.Variant.Pixel do
+defmodule BoringAvatars.Variant.Pixel do
+  @behaviour BoringAvatars
   @size 80
 
-  import BoringAvatar.Utilities
-  import BoringAvatar.SVG
-
-  @behaviour BoringAvatar
+  import BoringAvatars.Utilities
+  import BoringAvatars.SVG
 
   defp x_coord(k) do
     20 * rem(k, 4) + 10 * div(k, 4)
@@ -21,8 +20,12 @@ defmodule BoringAvatar.Variant.Pixel do
     {x_coord(k), 10 * (y_step + 1)}
   end
 
+  @impl BoringAvatars
+  def avatar(props \\ %BoringAvatars.Props{})
+  def avatar(props) when is_list(props), do: avatar(BoringAvatars.Props.__struct__(props))
+
   def avatar(
-        %BoringAvatar{
+        %BoringAvatars.Props{
           name: name,
           colours: colours,
           title: title,

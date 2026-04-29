@@ -1,13 +1,16 @@
-defmodule BoringAvatar.Variant.Sunset do
+defmodule BoringAvatars.Variant.Sunset do
+  @behaviour BoringAvatars
   @size 80
 
-  import BoringAvatar.Utilities
-  import BoringAvatar.SVG
+  import BoringAvatars.Utilities
+  import BoringAvatars.SVG
 
-  @behaviour BoringAvatar
+  @impl BoringAvatars
+  def avatar(props \\ %BoringAvatars.Props{})
+  def avatar(props) when is_list(props), do: avatar(BoringAvatars.Props.__struct__(props))
 
   def avatar(
-        %BoringAvatar{
+        %BoringAvatars.Props{
           name: name,
           colours: colours,
           title: title,

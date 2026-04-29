@@ -1,13 +1,27 @@
-defmodule BoringAvatar.MixProject do
+defmodule BoringAvatars.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :boring_avatar,
+      name: "Boring Avatars",
+      app: :boring_avatars,
       version: "0.1.0",
       elixir: "~> 1.17",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      source_url: "https://github.com/byhemechi/boring_avatars_ex",
+      docs: &docs/0,
+      package: package(),
+      description:
+        "A direct port of boringdesigners/boring-avatars to elixir, with no dependencies"
+    ]
+  end
+
+  defp docs do
+    [
+      main: "BoringAvatars",
+      logo: "logo.svg",
+      extras: ["README.md"]
     ]
   end
 
@@ -18,8 +32,13 @@ defmodule BoringAvatar.MixProject do
   end
 
   defp deps do
+    [{:ex_doc, "~> 0.34", only: :dev, runtime: false, warn_if_outdated: true}]
+  end
+
+  defp package() do
     [
-      {:color, "~> 0.12"}
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/byhemechi/boring_avatars_ex"}
     ]
   end
 end

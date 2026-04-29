@@ -1,4 +1,4 @@
-defmodule BoringAvatar.Syntax do
+defmodule BoringAvatars.Syntax do
   {:__block__, _, allowed_first_chars} =
     quote do
       ~c":_"
@@ -101,7 +101,7 @@ defmodule BoringAvatar.Syntax do
   defp to_iodata(<<>>, 0, original, _acc, _len) do
     original
   end
-w
+
   defp to_iodata(<<>>, skip, original, acc, len) do
     [acc | binary_part(original, skip, len)]
   end

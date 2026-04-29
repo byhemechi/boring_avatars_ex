@@ -1,4 +1,4 @@
-defmodule BoringAvatar.Utilities do
+defmodule BoringAvatars.Utilities do
   import Bitwise
 
   defmacro unique_id(opts) do

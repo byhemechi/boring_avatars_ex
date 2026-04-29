@@ -1,4 +1,4 @@
-defmodule BoringAvatar.SVG do
+defmodule BoringAvatars.SVG do
   elements = [
     "a",
     "animate",
@@ -65,7 +65,7 @@ defmodule BoringAvatar.SVG do
     "view"
   ]
 
-  import BoringAvatar.Syntax
+  import BoringAvatars.Syntax
 
   for name <- elements do
     tag_name = name |> Macro.underscore() |> String.to_atom()

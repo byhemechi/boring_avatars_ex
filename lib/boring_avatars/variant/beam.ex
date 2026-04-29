@@ -1,10 +1,9 @@
-defmodule BoringAvatar.Variant.Beam do
+defmodule BoringAvatars.Variant.Beam do
+  @behaviour BoringAvatars
   @size 36
 
-  import BoringAvatar.Utilities
-  import BoringAvatar.SVG
-
-  @behaviour BoringAvatar
+  import BoringAvatars.Utilities
+  import BoringAvatars.SVG
 
   def generate_data(name, colours) do
     num_from_name = hash_code(name)
@@ -47,8 +46,12 @@ defmodule BoringAvatar.Variant.Beam do
     }
   end
 
+  @impl BoringAvatars
+  def avatar(props \\ %BoringAvatars.Props{})
+  def avatar(props) when is_list(props), do: avatar(BoringAvatars.Props.__struct__(props))
+
   def avatar(
-        %BoringAvatar{
+        %BoringAvatars.Props{
           name: name,
           colours: colours,
           title: title,
